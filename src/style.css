@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid; }
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px; }
+  #projects .projects-header {
+    width: 100%; }
+  #projects .project {
+    margin: 20px;
+    width: calc((100% - 80px) / 2); }
+
+@media (max-width: 1300px) {
+  #projects .project {
+    width: 100%; } }
+.project {
+  display: flex;
+  flex-direction: row; }
+  .project .img-container {
+    flex: 0 0 auto; }
+    .project .img-container .project-img {
+      height: 160px;
+      width: 240px; }
+  .project .project-caption {
+    flex: 1 1 100%; }
+    .project .project-caption .stack-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .project {
+    flex-direction: column;
+    align-items: center; }
+    .project .project-caption {
+      text-align: center; }
+      .project .project-caption .stack-list {
+        justify-content: center; } }
+#projects .projects-header {
+  text-align: center; }
+#projects .project .img-container .project-img {
+  border-radius: 10px;
+  background-color: #ccc4b8; }
+#projects .project .project-caption .project-title {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 24px; }
+#projects .project .project-caption .repo-link {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 20px; }
+#projects .project .project-caption .stack-list {
+  margin-top: 20px;
+  list-style: none; }
+  #projects .project .project-caption .stack-list li {
+    margin: 5px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 999px;
+    background-color: #413e3a;
+    color: #fffbf0;
+    font-size: 14px; }
+
+/*# sourceMappingURL=style.css.map */
