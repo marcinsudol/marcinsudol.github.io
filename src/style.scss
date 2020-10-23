@@ -21,7 +21,7 @@ $breakdown-md: 1300px;
 }
 
 // -----------------------------------
-// PROJECTS CONTAINER LAYOUT
+// PROJECTS CONTAINER RESPONSIVE LAYOUT
 // -----------------------------------
 #projects {
   display: flex;
@@ -51,7 +51,7 @@ $breakdown-md: 1300px;
 }
 
 // -----------------------------------
-// PROJECT LAYOUT
+// PROJECT RESPONSIVE LAYOUT
 // -----------------------------------
 .project {
   display: flex;
@@ -93,7 +93,7 @@ $breakdown-md: 1300px;
 }
 
 // -----------------------------------
-// PROJECTS FORMATTING
+// OTHER FORMATTING
 // -----------------------------------
 #projects {
   .projects-header {
@@ -115,7 +115,10 @@ $breakdown-md: 1300px;
       .repo-link {
         display: inline-block;
         padding: 5px 10px;
-        font-size: 20px;
+        background-color: $color-light;
+        border: 1px solid $color-medium;
+        font-size: 16px;
+        text-transform: uppercase;
       }
       .stack-list {
         margin-top: 20px;

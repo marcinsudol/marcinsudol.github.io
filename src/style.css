@@ -54,7 +54,10 @@
 #projects .project .project-caption .repo-link {
   display: inline-block;
   padding: 5px 10px;
-  font-size: 20px; }
+  background-color: #fffbf0;
+  border: 1px solid #ccc4b8;
+  font-size: 16px;
+  text-transform: uppercase; }
 #projects .project .project-caption .stack-list {
   margin-top: 20px;
   list-style: none; }
