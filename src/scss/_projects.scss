@@ -1,0 +1,76 @@
+#projects {
+  font-size: 1.6rem;
+}
+
+.projects-group {
+  .header {
+    width: 100%;
+    h3 {
+      padding: 0.4em 1em;
+      text-align: center;
+      font-size: 1.4em;
+    }
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include mq($breakdown-sm) {
+      flex-direction: row;
+    }
+    .img-container {
+      flex: 0 0 auto;
+      margin: auto;
+      a {
+        display: block;
+        img {
+          display: block;
+          height: 160px;
+          width: 240px;
+          border-radius: 10px;
+          background-color: $color-medium;
+        }
+      }
+    }
+    .info {
+      flex: 1 1 100%;
+      text-align: center;
+      @include mq($breakdown-sm) {
+        text-align: left;
+      }
+      .name {
+        display: inline-block;
+        padding: 0.4em 1em;
+        font-size: 1.4em;
+      }
+      .repo {
+        display: inline-block;
+        padding: 0.4em 1em;
+        background-color: $color-light;
+        border: 1px solid $color-medium;
+        border-radius: 0.25em;
+        text-transform: uppercase;
+      }
+      .tech {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include mq($breakdown-sm) {
+          justify-content: flex-start;
+        }
+        margin: 1em 0;
+        list-style: none;
+        li {
+          margin: 0.2em;
+          padding: 0.4em 1em;
+          border: none;
+          border-radius: 0.25em;
+          background-color: $color-dark;
+          color: $color-light;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}
