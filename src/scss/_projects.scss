@@ -6,9 +6,8 @@
 .projects-group {
   .header {
     width: 100%;
+    text-align: center;
     h3 {
-      padding: 0.4em 1em;
-      text-align: center;
       font-size: 1.4em;
     }
   }
@@ -40,16 +39,11 @@
         text-align: left;
       }
       .name {
-        display: inline-block;
-        padding: 0.4em 1em;
         font-size: 1.4em;
       }
       .repo {
-        display: inline-block;
-        padding: 0.4em 1em;
         background-color: $color-light;
         border: 1px solid $color-medium;
-        border-radius: 0.25em;
         text-transform: uppercase;
       }
       .tech {
@@ -63,10 +57,7 @@
         margin: 1em 0;
         list-style: none;
         li {
-          margin: 0.2em;
-          padding: 0.4em 1em;
           border: none;
-          border-radius: 0.25em;
           background-color: $color-dark;
           color: $color-light;
           font-size: 0.9em;
