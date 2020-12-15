@@ -31,19 +31,31 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 1.6rem;
   background-color: #413e3a;
 }
 
+@media screen and (min-width: 768px) {
+  #home {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #home .header {
+  margin: auto;
   font-size: 2em;
   color: #eb6028;
+}
+
+@media screen and (min-width: 768px) {
+  #home .header {
+    margin: 0;
+  }
 }
 
 #home nav {
@@ -51,26 +63,49 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  #home nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #home nav a {
-  display: block;
-  margin: 0.4em;
-  padding: 0.4em 1em;
+  height: auto;
+  line-height: 3em;
+  margin: 1em;
+  padding: 0 1em;
   border-radius: 0.25em;
+  font-size: 1.3em;
   background-color: #413e3a;
   color: #eb6028;
+  text-align: center;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+#home nav a:not(:last-child) {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #home nav a {
+    margin: 0;
+  }
 }
 
 #home nav a:hover {
