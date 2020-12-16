@@ -4,48 +4,76 @@
 }
 
 .projects-group {
+  margin: 0.4em;
+  padding: 0.4em;
+  @include mq($breakdown-sm) {
+    margin: 1em;
+    padding: 1em;
+  }
+  border: 1px solid $color-medium;
+  @include mq($breakdown-md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .header {
     width: 100%;
     text-align: center;
+
     h3 {
       font-size: 1.4em;
     }
   }
+
   .project {
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
-    width: 100%;
     @include mq($breakdown-sm) {
       flex-direction: row;
     }
+    width: 100%;
+    @include mq($breakdown-md) {
+      width: 50%;
+    }
+
     .img-container {
       flex: 0 0 auto;
       margin: auto;
+
       a {
         display: block;
+
         img {
           display: block;
           height: 160px;
           width: 240px;
           border-radius: 10px;
+          border: none;
           background-color: $color-medium;
         }
       }
     }
+
     .info {
       flex: 1 1 100%;
       text-align: center;
       @include mq($breakdown-sm) {
         text-align: left;
       }
+
       .name {
         font-size: 1.4em;
+        background-color: $color-light;
       }
+
       .repo {
         background-color: $color-light;
         border: 1px solid $color-medium;
         text-transform: uppercase;
       }
+
       .tech {
         display: flex;
         flex-direction: row;
@@ -56,6 +84,7 @@
         }
         margin: 1em 0;
         list-style: none;
+
         li {
           border: none;
           background-color: $color-dark;

@@ -1,0 +1,23 @@
+#about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.6rem;
+  background-color: $color-medium;
+
+  #bio {
+    max-width: 40em;
+    background-color: $color-medium;
+    filter: brightness(110%);
+  }
+
+  #contact {
+    font-size: 1.1em;
+    #email {
+      background-color: $color-medium;
+      filter: brightness(110%);
+    }
+  }
+}

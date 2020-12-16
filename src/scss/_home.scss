@@ -41,13 +41,15 @@
       }
       font-size: 1.3em;
       background-color: $color-dark;
-      color: $accent-light;
+      border: 1px solid $color-dark;
+      color: $color-light;
       text-align: center;
-      &:hover {
-        border: 1px solid $accent-light;
-      }
+      &:hover,
       &:active {
         border: 1px solid $accent-light;
+        color: $accent-light;
+      }
+      &:active {
         filter: brightness(120%);
       }
       transition: all 0.4s;
