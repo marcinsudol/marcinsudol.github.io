@@ -1,104 +1,49 @@
+import data from "./data.js";
 
-// ----- FUNCTIONAL COMPONENT -----
-const FunComponent = (props) => {
-    return (
-        <p>Subcomponent {props.value}</p>
-    );
+document.onreadystatechange = (event) => {
+  if (event.target.readyState === "complete") {
+    loadProjects(data);
+  }
 };
 
+const loadProjects = (data) => {
+  const projects = document.getElementById("projects");
+  data.forEach((obj) => {
+    projects.appendChild(createProjectsGroupElement(obj));
+  });
+};
 
+const createProjectsGroupElement = (obj) => {
+  const group = document.createElement("div");
+  group.classList = "projects-group container";
+  group.innerHTML = `<header class="header">
+            <h3 class="textbox">${obj.title}</h3>
+          </header>`;
 
+  obj.projects.forEach((obj) => {
+    group.appendChild(createProject(obj));
+  });
 
+  return group;
+};
 
-// ----- CLASS COMPONENT -----
-class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-
-        // ----- STATE FOR STATEFUL COMPONENT -----
-        this.state = {
-            value: 0,
-            input: ''
-        };
-
-        // ----- BINDING METHODS -----
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    // ----- PROP TYPES -----
-    static propTypes = {
-        title: PropTypes.string.isRequired,
-        value: PropTypes.number,
-        tools: PropTypes.array
-    }
-
-    // ----- DEFAULT PROPS -----
-    static defaultProps = {
-        title: 'Title',
-        value: 1,
-        tools: ['react']
-    }
-
-    // ----- COMPONENT DID MOUNT -----
-    componentDidMount() {
-        // ----- CALL FOR API -----
-        // ----- ADD LISTENERS -----
-        // window.addEventListener('keydown', function () { });
-    }
-
-    // ----- COMPONENT WILL UNMOUNT -----
-    componentWillUnmount() {
-        // ----- REMOVE LISTENERS -----
-        // window.removeEventListener('keydown', function () { });
-    }
-
-    // ----- SHOULD COMPONENT UPDATE -----
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;
-    }
-
-    // ----- METHODS -----
-    handleChange(event) {
-        let v = event.target.value;
-
-        // ----- SET STATE -----
-        this.setState((state, props) => ({
-            value: state.value + props.value,
-            input: v
-        }));
-    }
-
-    // ----- RENDER -----
-    render() {
-        // ----- INLINE STYLES -----
-        const styles = {
-            border: "2px solid blue",
-            fontSize: 20
-        }
-
-        return (
-            <div>
-                <h1 className="text-primary">My component</h1>
-                <h2>{this.props.title + " " + this.props.value}</h2>
-                <h3>Tools: {this.props.tools.join(", ")}</h3>
-                <hr />
-                <input type="text" onChange={this.handleChange} style={styles}></input>
-                <span> {this.state.value} </span>
-                <hr />
-                <FunComponent value={1} />
+const createProject = (obj) => {
+  const project = document.createElement("article");
+  project.classList = "project";
+  project.innerHTML = `<div class="img-container">
+              <a href="*"><img /></a>
             </div>
-        );
-    }
+            <div class="info container-sm">
+              <h4 class="name textbox">${obj.name}</h4>
+              <a class="repo textbox">GitHub repo</a>
+              <ul class="tech">`;
+  const list = project.querySelector(".tech");
+
+  obj.tech.forEach((tech) => {
+    let item = document.createElement("li");
+    item.classList = "textbox";
+    item.textContent = tech;
+    list.appendChild(item);
+  });
+  return project;
 };
-
-
-
-
-
-// ----- RENDER COMPONENT -----
-ReactDOM.render(
-    <MyComponent
-        title='Template' value={4} tools={['jquery', 'bootstrap', 'react']} />,
-    document.getElementById('content')
-);
-

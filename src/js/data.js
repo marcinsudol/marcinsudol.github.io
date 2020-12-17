@@ -1,4 +1,4 @@
-const projects = [
+const data = [
   {
     title: "Projects done for freeCodeCamp RWD certificate",
     projects: [
@@ -88,4 +88,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export default data;
