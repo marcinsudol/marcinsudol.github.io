@@ -68,13 +68,18 @@ button {
 #home .header {
   margin: auto;
   font-size: 2em;
-  color: #eb6028;
+  color: #fffbf0;
 }
 
 @media screen and (min-width: 768px) {
   #home .header {
     margin: 0;
   }
+}
+
+#home .header i {
+  color: #eb6028;
+  font-size: 0.75em;
 }
 
 #home nav {
@@ -238,8 +243,18 @@ button {
 }
 
 .projects-group .project .info .name {
+  padding-left: 0;
   font-size: 1.4em;
-  background-color: #fffbf0;
+  text-transform: capitalize;
+}
+
+.projects-group .project .info .name a:hover {
+  color: #eb6028;
+}
+
+.projects-group .project .info .name a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .projects-group .project .info .repo {
@@ -296,14 +311,15 @@ button {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.6rem;
-  background-color: #ccc4b8;
+  background-color: #413e3a;
 }
 
 #about #bio {
   max-width: 40em;
-  background-color: #ccc4b8;
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  background-color: #413e3a;
+  color: #fffbf0;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 #about #contact {
@@ -311,7 +327,7 @@ button {
 }
 
 #about #contact #email {
-  background-color: #ccc4b8;
+  background-color: #fffbf0;
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
 }

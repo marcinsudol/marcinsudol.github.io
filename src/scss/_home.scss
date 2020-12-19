@@ -12,9 +12,13 @@
   .header {
     margin: auto;
     font-size: 2em;
-    color: $accent-light;
+    color: $color-light;
     @include mq($breakdown-sm) {
       margin: 0;
+    }
+    i {
+      color: $accent-light;
+      font-size: 0.75em;
     }
   }
 

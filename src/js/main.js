@@ -31,11 +31,11 @@ const createProject = (obj) => {
   const project = document.createElement("article");
   project.classList = "project";
   project.innerHTML = `<div class="img-container">
-              <a href="*"><img /></a>
+              <a href="${obj.page}" target="_blank"><img src="${obj.img}" /></a>
             </div>
             <div class="info container-sm">
-              <h4 class="name textbox">${obj.name}</h4>
-              <a class="repo textbox">GitHub repo</a>
+              <h4 class="name textbox"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
+              <a class="repo textbox" href="${obj.repo}" target="_blank">GitHub repo</a>
               <ul class="tech">`;
   const list = project.querySelector(".tech");
 

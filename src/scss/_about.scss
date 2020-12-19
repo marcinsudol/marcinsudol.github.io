@@ -5,18 +5,19 @@
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.6rem;
-  background-color: $color-medium;
+  background-color: $color-dark;
 
   #bio {
     max-width: 40em;
-    background-color: $color-medium;
-    filter: brightness(110%);
+    background-color: $color-dark;
+    color: $color-light;
+    filter: brightness(120%);
   }
 
   #contact {
     font-size: 1.1em;
     #email {
-      background-color: $color-medium;
+      background-color: $color-light;
       filter: brightness(110%);
     }
   }

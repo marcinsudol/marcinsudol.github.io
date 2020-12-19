@@ -64,8 +64,15 @@
       }
 
       .name {
+        padding-left: 0;
         font-size: 1.4em;
-        background-color: $color-light;
+        text-transform: capitalize;
+        a:hover {
+          color: $accent-light;
+        }
+        a {
+          transition: all 0.3s;
+        }
       }
 
       .repo {
