@@ -29,13 +29,20 @@ button {
   border-radius: 0.25em;
 }
 
-.container {
+.pill {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 999px;
+}
+
+.box {
   margin: 1em;
   padding: 1em;
   border-radius: 0.6em;
 }
 
-.container-sm {
+.box-sm {
   margin: 0.4em;
   padding: 0.4em;
   border-radius: 0.4em;
@@ -75,11 +82,6 @@ button {
   #home .header {
     margin: 0;
   }
-}
-
-#home .header i {
-  color: #eb6028;
-  font-size: 0.75em;
 }
 
 #home nav {
@@ -218,13 +220,24 @@ button {
 
 .projects-group .project .img-container a {
   display: block;
+  border: 1px solid #ccc4b8;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.projects-group .project .img-container a:hover {
+  -webkit-box-shadow: 0 3px 5px 1px #ccc4b8;
+          box-shadow: 0 3px 5px 1px #ccc4b8;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .projects-group .project .img-container a img {
-  display: block;
   height: 160px;
   width: 240px;
-  border-radius: 10px;
+  display: block;
   border: none;
   background-color: #ccc4b8;
 }
@@ -328,7 +341,13 @@ button {
 
 #about #contact #email {
   background-color: #fffbf0;
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  color: #252422;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#about #contact #email:hover {
+  background-color: #eb6028;
+  color: #fffbf0;
 }
 /*# sourceMappingURL=main.css.map */

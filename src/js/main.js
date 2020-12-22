@@ -15,7 +15,7 @@ const loadProjects = (data) => {
 
 const createProjectsGroupElement = (obj) => {
   const group = document.createElement("div");
-  group.classList = "projects-group container";
+  group.classList = "projects-group box";
   group.innerHTML = `<header class="header">
             <h3 class="textbox">${obj.title}</h3>
           </header>`;
@@ -33,9 +33,9 @@ const createProject = (obj) => {
   project.innerHTML = `<div class="img-container">
               <a href="${obj.page}" target="_blank"><img src="${obj.img}" /></a>
             </div>
-            <div class="info container-sm">
+            <div class="info box-sm">
               <h4 class="name textbox"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
-              <a class="repo textbox" href="${obj.repo}" target="_blank">GitHub repo</a>
+              <a class="repo pill" href="${obj.repo}" target="_blank">GitHub repo</a>
               <ul class="tech">`;
   const list = project.querySelector(".tech");
 

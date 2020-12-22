@@ -18,7 +18,12 @@
     font-size: 1.1em;
     #email {
       background-color: $color-light;
-      filter: brightness(110%);
+      color: $accent-dark;
+      &:hover {
+        background-color: $accent-light;
+        color: $color-light;
+      }
+      transition: all 0.2s;
     }
   }
 }

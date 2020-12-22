@@ -44,12 +44,19 @@
 
       a {
         display: block;
+        border: 1px solid $color-medium;
+        border-radius: 10px;
+        overflow: hidden;
+        &:hover {
+          box-shadow: 0 3px 5px 1px $color-medium;
+          transform: translateY(-3px);
+        }
+        transition: all 0.4s;
 
         img {
-          display: block;
           height: 160px;
           width: 240px;
-          border-radius: 10px;
+          display: block;
           border: none;
           background-color: $color-medium;
         }

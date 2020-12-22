@@ -16,10 +16,6 @@
     @include mq($breakdown-sm) {
       margin: 0;
     }
-    i {
-      color: $accent-light;
-      font-size: 0.75em;
-    }
   }
 
   nav {
