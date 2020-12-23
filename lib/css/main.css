@@ -54,8 +54,8 @@ button {
 }
 
 .hover-shadow:hover {
-  -webkit-box-shadow: 0 0 5px 1px #ccc4b8;
-          box-shadow: 0 0 5px 1px #ccc4b8;
+  -webkit-box-shadow: 0 0 5px #ccc4b8;
+          box-shadow: 0 0 5px #ccc4b8;
 }
 
 .hover-bright {
@@ -78,7 +78,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 1.6rem;
-  background-color: #413e3a;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,11 +93,8 @@ button {
 
 #home .header {
   margin: auto;
-  font-size: 2em;
-  background-color: #413e3a;
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
-  color: #fffbf0;
+  font-size: 1.6em;
+  color: #413e3a;
 }
 
 @media screen and (min-width: 768px) {
@@ -138,9 +134,8 @@ button {
   line-height: 2em;
   margin: 1em;
   font-size: 1.3em;
-  background-color: #413e3a;
-  border: 1px solid #413e3a;
-  color: #fffbf0;
+  border: 1px solid white;
+  color: #413e3a;
   text-align: center;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -157,8 +152,8 @@ button {
 }
 
 #home nav a:hover, #home nav a:active {
-  border: 1px solid #ccc4b8;
-  color: #ccc4b8;
+  border: 1px solid #eb6028;
+  color: #eb6028;
 }
 
 #home nav a:active {
@@ -172,19 +167,19 @@ button {
 }
 
 .projects-group {
-  margin: 0.4em;
+  margin: 1em 0.4em;
   padding: 0.4em;
   border: 1px solid #ccc4b8;
 }
 
 @media screen and (min-width: 768px) {
   .projects-group {
-    margin: 1em;
+    margin: 2em 1em;
     padding: 1em;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1100px) {
   .projects-group {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -208,7 +203,7 @@ button {
 }
 
 .projects-group .project {
-  margin-top: 1em;
+  margin-top: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,7 +223,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1100px) {
   .projects-group .project {
     width: 50%;
   }
@@ -251,8 +246,8 @@ button {
 }
 
 .projects-group .project .img-container a:hover {
-  -webkit-box-shadow: 0 3px 5px 1px #ccc4b8;
-          box-shadow: 0 3px 5px 1px #ccc4b8;
+  -webkit-box-shadow: 0 3px 5px #ccc4b8;
+          box-shadow: 0 3px 5px #ccc4b8;
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
@@ -275,13 +270,20 @@ button {
 @media screen and (min-width: 768px) {
   .projects-group .project .info {
     text-align: left;
+    margin: 0 1em;
   }
 }
 
 .projects-group .project .info .name {
-  padding-left: 0;
+  margin: 0.6em 0;
   font-size: 1.4em;
   text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-group .project .info .name {
+    margin-top: 0;
+  }
 }
 
 .projects-group .project .info .name a:hover {
@@ -294,9 +296,11 @@ button {
 }
 
 .projects-group .project .info .repo {
-  background-color: #413e3a;
-  color: #fffbf0;
-  font-size: 0.7em;
+  vertical-align: middle;
+  margin-bottom: 1em;
+  border: 1px solid #ccc4b8;
+  color: #413e3a;
+  font-size: 0.8em;
   text-transform: uppercase;
 }
 

@@ -35,8 +35,8 @@ const createProject = (obj) => {
               <a href="${obj.page}" target="_blank"><img src="${obj.img}" /></a>
             </div>
             <div class="info box-sm">
-              <h4 class="name textbox"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
-              <a class="repo textbox hover-bright" href="${obj.repo}" target="_blank"><i class="fab fa-github"></i> repository</a>
+              <h4 class="name"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
+              <a class="repo textbox hover-shadow" href="${obj.repo}" target="_blank"><i class="fab fa-github"></i> repository</a>
               <ul class="tech"></ul>
             </div>`;
   const list = project.querySelector(".tech");

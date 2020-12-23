@@ -8,7 +8,7 @@ $font-em: "Comfortaa", cursive;
 $font-normal: "Montserrat", sans-serif;
 
 $breakdown-sm: 768px;
-$breakdown-md: 1440px;
+$breakdown-md: 1100px;
 
 html {
   scroll-behavior: smooth;
@@ -67,7 +67,7 @@ button {
 
 .hover-shadow {
   &:hover {
-    box-shadow: 0 0 5px 1px $color-medium;
+    box-shadow: 0 0 5px $color-medium;
   }
   transition: all 0.4s;
 }
