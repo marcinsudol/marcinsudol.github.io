@@ -64,3 +64,17 @@ button {
   padding: 0.4em;
   border-radius: 0.4em;
 }
+
+.hover-shadow {
+  &:hover {
+    box-shadow: 0 0 5px 1px $color-medium;
+  }
+  transition: all 0.4s;
+}
+
+.hover-bright {
+  &:hover {
+    filter: brightness(130%);
+  }
+  transition: all 0.4s;
+}

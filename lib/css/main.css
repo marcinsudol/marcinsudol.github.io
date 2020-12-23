@@ -48,6 +48,26 @@ button {
   border-radius: 0.4em;
 }
 
+.hover-shadow {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hover-shadow:hover {
+  -webkit-box-shadow: 0 0 5px 1px #ccc4b8;
+          box-shadow: 0 0 5px 1px #ccc4b8;
+}
+
+.hover-bright {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hover-bright:hover {
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+
 #home {
   min-height: 100vh;
   display: -webkit-box;
@@ -75,6 +95,9 @@ button {
 #home .header {
   margin: auto;
   font-size: 2em;
+  background-color: #413e3a;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
   color: #fffbf0;
 }
 
@@ -134,8 +157,8 @@ button {
 }
 
 #home nav a:hover, #home nav a:active {
-  border: 1px solid #eb6028;
-  color: #eb6028;
+  border: 1px solid #ccc4b8;
+  color: #ccc4b8;
 }
 
 #home nav a:active {
@@ -271,8 +294,9 @@ button {
 }
 
 .projects-group .project .info .repo {
-  background-color: #fffbf0;
-  border: 1px solid #ccc4b8;
+  background-color: #413e3a;
+  color: #fffbf0;
+  font-size: 0.7em;
   text-transform: uppercase;
 }
 
@@ -289,7 +313,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em 0;
+  margin: 0.2em 0;
   list-style: none;
 }
 
@@ -302,10 +326,9 @@ button {
 }
 
 .projects-group .project .info .tech li {
-  border: none;
-  background-color: #413e3a;
-  color: #fffbf0;
-  font-size: 0.9em;
+  border: 1px solid #eb6028;
+  color: #eb6028;
+  font-size: 0.8em;
 }
 
 #about {
@@ -342,8 +365,8 @@ button {
 #about #contact #email {
   background-color: #fffbf0;
   color: #252422;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 #about #contact #email:hover {

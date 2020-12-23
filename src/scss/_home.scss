@@ -12,6 +12,8 @@
   .header {
     margin: auto;
     font-size: 2em;
+    background-color: $color-dark;
+    filter: brightness(130%);
     color: $color-light;
     @include mq($breakdown-sm) {
       margin: 0;
@@ -46,8 +48,8 @@
       text-align: center;
       &:hover,
       &:active {
-        border: 1px solid $accent-light;
-        color: $accent-light;
+        border: 1px solid $color-medium;
+        color: $color-medium;
       }
       &:active {
         filter: brightness(120%);

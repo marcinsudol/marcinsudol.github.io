@@ -8,9 +8,10 @@ document.onreadystatechange = (event) => {
 
 const loadProjects = (data) => {
   const projects = document.getElementById("projects");
-  data.forEach((obj) => {
-    projects.appendChild(createProjectsGroupElement(obj));
-  });
+
+  for (let i = data.length - 1; i >= 0; i--) {
+    projects.appendChild(createProjectsGroupElement(data[i]));
+  }
 };
 
 const createProjectsGroupElement = (obj) => {
@@ -20,9 +21,9 @@ const createProjectsGroupElement = (obj) => {
             <h3 class="textbox">${obj.title}</h3>
           </header>`;
 
-  obj.projects.forEach((obj) => {
-    group.appendChild(createProject(obj));
-  });
+  for (let i = obj.projects.length - 1; i >= 0; i--) {
+    group.appendChild(createProject(obj.projects[i]));
+  }
 
   return group;
 };
@@ -35,8 +36,9 @@ const createProject = (obj) => {
             </div>
             <div class="info box-sm">
               <h4 class="name textbox"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
-              <a class="repo pill" href="${obj.repo}" target="_blank">GitHub repo</a>
-              <ul class="tech">`;
+              <a class="repo textbox hover-bright" href="${obj.repo}" target="_blank"><i class="fab fa-github"></i> repository</a>
+              <ul class="tech"></ul>
+            </div>`;
   const list = project.querySelector(".tech");
 
   obj.tech.forEach((tech) => {
