@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
@@ -8,8 +9,9 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: inherit;
   font-size: 1em;
+  font-weight: normal;
   color: inherit;
 }
 
@@ -58,6 +60,18 @@ button {
           box-shadow: 0 0 5px #ccc4b8;
 }
 
+.hover-up {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hover-up:hover {
+  -webkit-box-shadow: 0 3px 5px #ccc4b8;
+          box-shadow: 0 3px 5px #ccc4b8;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
 .hover-bright {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -66,6 +80,10 @@ button {
 .hover-bright:hover {
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+.special {
+  font-family: "Coda", cursive;
 }
 
 #home {
@@ -241,15 +259,6 @@ button {
   border: 1px solid #ccc4b8;
   border-radius: 10px;
   overflow: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.projects-group .project .img-container a:hover {
-  -webkit-box-shadow: 0 3px 5px #ccc4b8;
-          box-shadow: 0 3px 5px #ccc4b8;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
 }
 
 .projects-group .project .img-container a img {

@@ -18,7 +18,7 @@ const createProjectsGroupElement = (obj) => {
   const group = document.createElement("div");
   group.classList = "projects-group box";
   group.innerHTML = `<header class="header">
-            <h3 class="textbox">${obj.title}</h3>
+            <h3 class="textbox special">${obj.title}</h3>
           </header>`;
 
   for (let i = obj.projects.length - 1; i >= 0; i--) {
@@ -32,10 +32,10 @@ const createProject = (obj) => {
   const project = document.createElement("article");
   project.classList = "project";
   project.innerHTML = `<div class="img-container">
-              <a href="${obj.page}" target="_blank"><img src="${obj.img}" /></a>
+              <a href="${obj.page}" target="_blank" class="hover-up"><img src="${obj.img}" /></a>
             </div>
             <div class="info box-sm">
-              <h4 class="name"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
+              <h4 class="name special"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
               <a class="repo textbox hover-shadow" href="${obj.repo}" target="_blank"><i class="fab fa-github"></i> repository</a>
               <ul class="tech"></ul>
             </div>`;

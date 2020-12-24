@@ -4,8 +4,8 @@ $color-dark: hsl(34, 6%, 24%);
 $accent-light: hsl(17, 83%, 54%);
 $accent-dark: hsl(40, 4%, 14%);
 
-$font-em: "Comfortaa", cursive;
-$font-normal: "Montserrat", sans-serif;
+$font-special: "Coda", cursive;
+$font-normal: "Open Sans", sans-serif;
 
 $breakdown-sm: 768px;
 $breakdown-md: 1100px;
@@ -13,14 +13,16 @@ $breakdown-md: 1100px;
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  font-family: $font-normal;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $font-normal;
+  font-family: inherit;
   font-size: 1em;
+  font-weight: normal;
   color: inherit;
 }
 
@@ -72,9 +74,21 @@ button {
   transition: all 0.4s;
 }
 
+.hover-up {
+  &:hover {
+    box-shadow: 0 3px 5px $color-medium;
+    transform: translateY(-3px);
+  }
+  transition: all 0.4s;
+}
+
 .hover-bright {
   &:hover {
     filter: brightness(130%);
   }
   transition: all 0.4s;
+}
+
+.special {
+  font-family: $font-special;
 }
