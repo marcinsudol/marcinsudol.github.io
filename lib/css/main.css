@@ -112,6 +112,7 @@ button {
 #home .header {
   margin: auto;
   font-size: 1.6em;
+  text-align: center;
   color: #413e3a;
 }
 
@@ -372,18 +373,18 @@ button {
 }
 
 #about #contact {
+  text-align: center;
   font-size: 1.1em;
 }
 
-#about #contact #email {
-  background-color: #fffbf0;
-  color: #252422;
+#about #contact .contact-item {
+  border: 1px solid #413e3a;
+  color: #fffbf0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-#about #contact #email:hover {
-  background-color: #eb6028;
-  color: #fffbf0;
+#about #contact .contact-item:hover {
+  border: 1px solid #fffbf0;
 }
 /*# sourceMappingURL=main.css.map */

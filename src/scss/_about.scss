@@ -15,13 +15,13 @@
   }
 
   #contact {
+    text-align: center;
     font-size: 1.1em;
-    #email {
-      background-color: $color-light;
-      color: $accent-dark;
+    .contact-item {
+      border: 1px solid $color-dark;
+      color: $color-light;
       &:hover {
-        background-color: $accent-light;
-        color: $color-light;
+        border: 1px solid $color-light;
       }
       transition: all 0.4s;
     }
