@@ -4,6 +4,9 @@
 }
 
 .projects-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 1em 0.4em;
   padding: 0.4em;
   @include mq($breakdown-sm) {
@@ -11,19 +14,11 @@
     padding: 1em;
   }
   border: 1px solid $color-medium;
-  @include mq($breakdown-md) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 
   .header {
     width: 100%;
     text-align: center;
-
-    h3 {
-      font-size: 1.4em;
-    }
+    font-size: 1.4em;
   }
 
   .project {
@@ -73,11 +68,11 @@
         }
         font-size: 1.4em;
         text-transform: capitalize;
-        a:hover {
-          color: $accent-light;
-        }
         a {
           transition: all 0.3s;
+          &:hover {
+            color: $accent-light;
+          }
         }
       }
 
@@ -87,7 +82,11 @@
         border: 1px solid $color-medium;
         color: $color-dark;
         font-size: 0.8em;
-        text-transform: uppercase;
+        &:hover {
+          background-color: $color-dark;
+          border-color: $color-dark;
+          color: $color-light;
+        }
       }
 
       .tech {

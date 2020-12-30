@@ -56,8 +56,8 @@ button {
 }
 
 .hover-shadow:hover {
-  -webkit-box-shadow: 0 0 5px #ccc4b8;
-          box-shadow: 0 0 5px #ccc4b8;
+  -webkit-box-shadow: 0 0 5px 1px #ccc4b8;
+          box-shadow: 0 0 5px 1px #ccc4b8;
 }
 
 .hover-up {
@@ -66,10 +66,10 @@ button {
 }
 
 .hover-up:hover {
-  -webkit-box-shadow: 0 3px 5px #ccc4b8;
-          box-shadow: 0 3px 5px #ccc4b8;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  -webkit-box-shadow: 0 6px 5px #ccc4b8;
+          box-shadow: 0 6px 5px #ccc4b8;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 
 .hover-bright {
@@ -80,6 +80,16 @@ button {
 .hover-bright:hover {
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+.hover-scale {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.hover-scale:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .special {
@@ -186,6 +196,15 @@ button {
 }
 
 .projects-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 1em 0.4em;
   padding: 0.4em;
   border: 1px solid #ccc4b8;
@@ -198,26 +217,9 @@ button {
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .projects-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 .projects-group .header {
   width: 100%;
   text-align: center;
-}
-
-.projects-group .header h3 {
   font-size: 1.4em;
 }
 
@@ -296,13 +298,13 @@ button {
   }
 }
 
-.projects-group .project .info .name a:hover {
-  color: #eb6028;
-}
-
 .projects-group .project .info .name a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.projects-group .project .info .name a:hover {
+  color: #eb6028;
 }
 
 .projects-group .project .info .repo {
@@ -311,7 +313,12 @@ button {
   border: 1px solid #ccc4b8;
   color: #413e3a;
   font-size: 0.8em;
-  text-transform: uppercase;
+}
+
+.projects-group .project .info .repo:hover {
+  background-color: #413e3a;
+  border-color: #413e3a;
+  color: #fffbf0;
 }
 
 .projects-group .project .info .tech {
@@ -345,8 +352,46 @@ button {
   font-size: 0.8em;
 }
 
-#about {
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+#contact header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  font-size: 1.6em;
+  color: #eb6028;
+}
+
+@media screen and (min-width: 768px) {
+  #contact header {
+    font-size: 2em;
+  }
+}
+
+#contact #contact-options {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,31 +405,24 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.6rem;
-  background-color: #413e3a;
-}
-
-#about #bio {
-  max-width: 40em;
-  background-color: #413e3a;
-  color: #fffbf0;
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
-}
-
-#about #contact {
-  text-align: center;
   font-size: 1.1em;
 }
 
-#about #contact .contact-item {
-  border: 1px solid #413e3a;
-  color: #fffbf0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+@media screen and (min-width: 768px) {
+  #contact #contact-options {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
-#about #contact .contact-item:hover {
-  border: 1px solid #fffbf0;
+#contact #contact-options .contact-item {
+  border: 1px solid #ccc4b8;
+  color: #413e3a;
+}
+
+#contact #contact-options .contact-item:hover {
+  background-color: #fffbf0;
 }
 /*# sourceMappingURL=main.css.map */

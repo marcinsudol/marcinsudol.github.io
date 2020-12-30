@@ -69,15 +69,15 @@ button {
 
 .hover-shadow {
   &:hover {
-    box-shadow: 0 0 5px $color-medium;
+    box-shadow: 0 0 5px 1px $color-medium;
   }
   transition: all 0.4s;
 }
 
 .hover-up {
   &:hover {
-    box-shadow: 0 3px 5px $color-medium;
-    transform: translateY(-3px);
+    box-shadow: 0 6px 5px $color-medium;
+    transform: translateY(-6px);
   }
   transition: all 0.4s;
 }
@@ -85,6 +85,13 @@ button {
 .hover-bright {
   &:hover {
     filter: brightness(130%);
+  }
+  transition: all 0.4s;
+}
+
+.hover-scale {
+  &:hover {
+    transform: scale(1.05);
   }
   transition: all 0.4s;
 }
