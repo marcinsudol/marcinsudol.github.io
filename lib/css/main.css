@@ -395,6 +395,8 @@ strong {
 }
 
 #contact {
+  min-height: 100vh;
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,62 +404,87 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100vh;
-  font-size: 1.6rem;
+  background-color: #eee;
 }
 
-#contact header {
-  font-family: "Coda", cursive;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+#contact #bio-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 3em;
-  font-size: 1.6em;
-  color: #eb6028;
+  margin: 1em;
+}
+
+#contact #bio-container #bio {
+  display: inline-block;
+  margin: 0.4em;
+  padding: 0.4em;
+  border-radius: 0.4em;
+  max-width: 60em;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 8px #bbb;
+          box-shadow: 0 2px 8px #bbb;
 }
 
 @media screen and (min-width: 768px) {
-  #contact header {
-    font-size: 2em;
+  #contact #bio-container #bio {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.6em;
   }
+}
+
+#contact #bio-container #bio header {
+  margin: 1em;
+}
+
+#contact #bio-container #bio header h4 {
+  font-family: "Coda", cursive;
+  font-size: 1.1em;
+  color: #eb6028;
+}
+
+#contact #bio-container #bio p {
+  margin: 1em;
+  color: #555;
+}
+
+#contact #bio-container #bio hr {
+  margin: 1em;
+  border: 1px solid #eee;
 }
 
 #contact #contact-options {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 3em;
   font-size: 1.1em;
-}
-
-@media screen and (min-width: 768px) {
-  #contact #contact-options {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 #contact #contact-options .contact-item {
@@ -468,8 +495,9 @@ strong {
   font-family: "Coda", cursive;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  border: 1px solid #bbb;
-  color: #555;
+  background-color: #555;
+  color: white;
+  transition: all 0.4s;
 }
 
 #contact #contact-options .contact-item:hover {
@@ -480,6 +508,7 @@ strong {
 }
 
 #contact #contact-options .contact-item:hover {
-  background-color: #eee;
+  background-color: white;
+  color: #555;
 }
 /*# sourceMappingURL=main.css.map */
