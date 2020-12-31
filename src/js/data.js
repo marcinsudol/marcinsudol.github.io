@@ -1,6 +1,6 @@
 const data = [
   {
-    title: "Projects done for freeCodeCamp RWD certificate",
+    title: "Projects for freeCodeCamp RWD certificate",
     projects: [
       {
         name: "tribute page",
@@ -40,7 +40,7 @@ const data = [
     ],
   },
   {
-    title: "Projects done for freeCodeCamp frameworks certificate",
+    title: "Projects for freeCodeCamp frameworks certificate",
     projects: [
       {
         name: "random quote generator",
@@ -80,7 +80,7 @@ const data = [
     ],
   },
   {
-    title: "My projects",
+    title: "Other Projects",
     projects: [
       {
         name: "to do list",

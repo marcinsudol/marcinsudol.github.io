@@ -1,6 +1,6 @@
-$color-light: hsl(46, 100%, 97%);
-$color-medium: hsl(38, 16%, 76%);
-$color-dark: hsl(34, 6%, 24%);
+$color-light: #eee;
+$color-medium: #bbb;
+$color-dark: #555;
 $accent-light: hsl(17, 83%, 54%);
 $accent-dark: hsl(40, 4%, 14%);
 
@@ -9,6 +9,7 @@ $font-normal: "Montserrat", sans-serif;
 
 $breakdown-sm: 768px;
 $breakdown-md: 1100px;
+$breakdown-lg: 1700px;
 
 html {
   scroll-behavior: smooth;
@@ -45,28 +46,21 @@ strong {
   }
 }
 
-.textbox {
+@mixin textbox {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 1em;
   border-radius: 0.25em;
 }
 
-.pill {
+@mixin pill {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 1em;
   border-radius: 999px;
 }
 
-.box {
-  display: inline-block;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 0.6em;
-}
-
-.box-sm {
+@mixin box {
   display: inline-block;
   margin: 0.4em;
   padding: 0.4em;
@@ -78,14 +72,14 @@ strong {
   }
 }
 
-.hover-shadow {
+@mixin hover-shadow {
   &:hover {
     box-shadow: 0 0 5px 1px $color-medium;
   }
   transition: all 0.4s;
 }
 
-.hover-up {
+@mixin hover-up {
   &:hover {
     box-shadow: 0 6px 5px $color-medium;
     transform: translateY(-6px);
@@ -93,20 +87,20 @@ strong {
   transition: all 0.4s;
 }
 
-.hover-bright {
+@mixin hover-bright {
   &:hover {
     filter: brightness(130%);
   }
   transition: all 0.4s;
 }
 
-.hover-scale {
+@mixin hover-scale {
   &:hover {
     transform: scale(1.05);
   }
   transition: all 0.4s;
 }
 
-.special {
+@mixin special {
   font-family: $font-special;
 }
