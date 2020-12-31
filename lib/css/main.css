@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 * {
@@ -24,6 +24,10 @@ button {
   cursor: pointer;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .textbox {
   display: inline-block;
   margin: 0.2em;
@@ -39,15 +43,25 @@ button {
 }
 
 .box {
+  display: inline-block;
   margin: 1em;
   padding: 1em;
   border-radius: 0.6em;
 }
 
 .box-sm {
+  display: inline-block;
   margin: 0.4em;
   padding: 0.4em;
   border-radius: 0.4em;
+}
+
+@media screen and (min-width: 768px) {
+  .box-sm {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.6em;
+  }
 }
 
 .hover-shadow {
@@ -106,34 +120,80 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 1.6rem;
+  background-image: url("./../../img/akshay--y-UmkbyXaE-unsplash.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
 }
 
-@media screen and (min-width: 768px) {
-  #home {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+#home #nav-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  text-align: right;
 }
 
-#home .header {
-  margin: auto;
-  font-size: 1.6em;
+#home #nav-container #contact-button {
+  height: auto;
+  line-height: 2em;
+  margin: 1em;
+  font-size: 1.1em;
+  color: white;
   text-align: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#home #nav-container #contact-button:hover, #home #nav-container #contact-button:active {
+  background-color: white;
   color: #413e3a;
 }
 
+#home #nav-container #contact-button:active {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+#home #nav-container #contact-button span {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
-  #home .header {
-    margin: 0;
+  #home #nav-container #contact-button span {
+    display: inline;
   }
 }
 
-#home nav {
-  width: 100%;
+#home #welcome-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  text-align: center;
+}
+
+#home #welcome-container #welcome {
+  max-width: 50em;
+  padding: 2em;
+  text-align: center;
+  background-color: white;
+  opacity: 0.95;
+  color: #413e3a;
+}
+
+#home #welcome-container #welcome h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#home #welcome-container #welcome p > strong {
+  color: #eb6028;
+}
+
+#home #buttons-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,51 +201,41 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media screen and (min-width: 768px) {
-  #home nav {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+  #home #buttons-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
 }
 
-#home nav a {
+#home #buttons-container #projects-button {
   height: auto;
   line-height: 2em;
   margin: 1em;
   font-size: 1.3em;
-  border: 1px solid white;
-  color: #413e3a;
+  border: 1px solid #eb6028;
+  background-color: #eb6028;
+  color: white;
   text-align: center;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-#home nav a:not(:last-child) {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 768px) {
-  #home nav a {
-    margin: 0;
-  }
-}
-
-#home nav a:hover, #home nav a:active {
-  border: 1px solid #eb6028;
+#home #buttons-container #projects-button:hover, #home #buttons-container #projects-button:active {
+  background-color: white;
   color: #eb6028;
 }
 
-#home nav a:active {
+#home #buttons-container #projects-button:active {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }

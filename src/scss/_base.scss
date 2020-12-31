@@ -5,7 +5,7 @@ $accent-light: hsl(17, 83%, 54%);
 $accent-dark: hsl(40, 4%, 14%);
 
 $font-special: "Coda", cursive;
-$font-normal: "Open Sans", sans-serif;
+$font-normal: "Montserrat", sans-serif;
 
 $breakdown-sm: 768px;
 $breakdown-md: 1100px;
@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+strong {
+  font-weight: bold;
+}
+
 @mixin mq($breakdown) {
   @media screen and (min-width: $breakdown) {
     @content;
@@ -56,15 +60,22 @@ button {
 }
 
 .box {
+  display: inline-block;
   margin: 1em;
   padding: 1em;
   border-radius: 0.6em;
 }
 
 .box-sm {
+  display: inline-block;
   margin: 0.4em;
   padding: 0.4em;
   border-radius: 0.4em;
+  @include mq($breakdown-sm) {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.6em;
+  }
 }
 
 .hover-shadow {

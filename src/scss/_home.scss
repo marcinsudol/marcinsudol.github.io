@@ -3,49 +3,82 @@
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
-  @include mq($breakdown-sm) {
-    justify-content: space-evenly;
-    align-items: center;
-  }
+  background-image: url("./../../img/akshay--y-UmkbyXaE-unsplash.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
 
-  .header {
-    margin: auto;
-    font-size: 1.6em;
-    text-align: center;
-    color: $color-dark;
-    @include mq($breakdown-sm) {
-      margin: 0;
-    }
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    @include mq($breakdown-sm) {
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-
-    a {
+  #nav-container {
+    flex: 1 1 0;
+    text-align: right;
+    #contact-button {
       height: auto;
       line-height: 2em;
       margin: 1em;
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
-      @include mq($breakdown-sm) {
-        margin: 0;
-      }
-      font-size: 1.3em;
-      border: 1px solid white;
-      color: $color-dark;
+      font-size: 1.1em;
+      color: white;
       text-align: center;
       &:hover,
       &:active {
-        border: 1px solid $accent-light;
+        background-color: white;
+        color: $color-dark;
+      }
+      &:active {
+        filter: brightness(120%);
+      }
+      transition: all 0.4s;
+      span {
+        display: none;
+        @include mq($breakdown-sm) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  #welcome-container {
+    flex: 0 0 auto;
+    text-align: center;
+    #welcome {
+      max-width: 50em;
+      padding: 2em;
+      text-align: center;
+      background-color: white;
+      opacity: 0.95;
+      color: $color-dark;
+      h1 {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 1em;
+      }
+      p > strong {
+        color: $accent-light;
+      }
+    }
+  }
+
+  #buttons-container {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @include mq($breakdown-sm) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    #projects-button {
+      height: auto;
+      line-height: 2em;
+      margin: 1em;
+      font-size: 1.3em;
+      border: 1px solid $accent-light;
+      background-color: $accent-light;
+      color: white;
+      text-align: center;
+      &:hover,
+      &:active {
+        background-color: white;
         color: $accent-light;
       }
       &:active {
