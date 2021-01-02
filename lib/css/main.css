@@ -116,7 +116,7 @@ strong {
 }
 
 #home #welcome-container #welcome p > strong {
-  color: #eb6028;
+  color: #4d9de0;
 }
 
 #home #buttons-container {
@@ -156,8 +156,8 @@ strong {
   line-height: 2em;
   margin: 1em;
   font-size: 1.3em;
-  border: 1px solid #eb6028;
-  background-color: #eb6028;
+  border: 1px solid #4d9de0;
+  background-color: #4d9de0;
   color: white;
   text-align: center;
   -webkit-transition: all 0.4s;
@@ -166,7 +166,7 @@ strong {
 
 #home #buttons-container #projects-button:hover, #home #buttons-container #projects-button:active {
   background-color: white;
-  color: #eb6028;
+  color: #4d9de0;
 }
 
 #home #buttons-container #projects-button:active {
@@ -331,7 +331,7 @@ strong {
 }
 
 .projects-group .project .info .name a:hover {
-  color: #eb6028;
+  color: #4d9de0;
 }
 
 .projects-group .project .info .repo {
@@ -389,12 +389,13 @@ strong {
   margin: 0.2em;
   padding: 0.4em 1em;
   border-radius: 0.25em;
-  border: 1px solid #eb6028;
-  color: #eb6028;
+  border: 1px solid #4d9de0;
+  color: #4d9de0;
   font-size: 0.8em;
 }
 
 #contact {
+  padding: 0.1em;
   min-height: 100vh;
   font-size: 1.6rem;
   display: -webkit-box;
@@ -404,7 +405,9 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #eee;
+  background-image: url("./../../img/chris-ried-LfG7RwMM6g8-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 #contact #bio-container {
@@ -424,7 +427,6 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em;
 }
 
 #contact #bio-container #bio {
@@ -453,7 +455,7 @@ strong {
 #contact #bio-container #bio header h4 {
   font-family: "Coda", cursive;
   font-size: 1.1em;
-  color: #eb6028;
+  color: #4d9de0;
 }
 
 #contact #bio-container #bio p {

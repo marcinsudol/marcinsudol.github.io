@@ -1,9 +1,13 @@
 #contact {
+  padding: 0.1em;
   min-height: 100vh;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  background-color: $color-light;
+  // background-color: $color-light;
+  background-image: url("./../../img/chris-ried-LfG7RwMM6g8-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
 
   #bio-container {
     flex: 1 1 0;
@@ -11,7 +15,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1em;
     #bio {
       @include box;
       max-width: 60em;
