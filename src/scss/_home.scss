@@ -17,7 +17,6 @@
       height: auto;
       line-height: 2em;
       margin: 1em;
-      font-size: 1.1em;
       color: white;
       text-align: center;
       &:hover,
@@ -81,7 +80,7 @@
       line-height: 2em;
       margin: 1em;
       font-size: 1.3em;
-      border: 1px solid $accent-light;
+      // border: 1px solid $accent-light;
       background-color: $accent-light;
       color: white;
       text-align: center;

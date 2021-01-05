@@ -4,24 +4,23 @@
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  // background-color: $color-light;
-  background-image: url("./../../img/chris-ried-LfG7RwMM6g8-unsplash.jpg");
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $color-light;
+  background-image: url("./../../img/mango-matter-1Ms3Zsb1v7g-unsplash.jpg");
   background-size: cover;
   background-position: center center;
 
   #bio-container {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     #bio {
       @include box;
       max-width: 60em;
       background-color: white;
+      opacity: 0.95;
       box-shadow: 0 2px 8px $color-medium;
       header {
         margin: 1em;
+        text-align: center;
         h4 {
           @include special;
           font-size: 1.1em;
@@ -40,19 +39,21 @@
   }
 
   #contact-options {
-    flex: 1 1 0;
+    align-self: stretch;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
-    margin: 2em 0 4em 0;
     font-size: 1.1em;
     .contact-item {
       @include textbox;
       @include special;
-      @include hover-up;
-      background-color: $color-dark;
-      color: white;
+      @include hover-shadow;
+      border: 1px solid $accent-light;
+      color: $accent-light;
+      &:hover {
+        background-color: $accent-light;
+        color: white;
+      }
     }
   }
 }
