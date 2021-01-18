@@ -172,6 +172,33 @@ strong {
           filter: brightness(120%);
 }
 
+#floating-home-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  margin: 1.4em;
+  background: none;
+  border: none;
+  color: #4d9de0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  #floating-home-button {
+    font-size: 3em;
+  }
+}
+
+#floating-home-button.visible {
+  opacity: 1;
+}
+
+#floating-home-button.hidden {
+  opacity: 0;
+}
+
 #projects {
   padding: 0.1em;
   min-height: 100vh;

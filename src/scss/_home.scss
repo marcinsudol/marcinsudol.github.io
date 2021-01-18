@@ -80,7 +80,6 @@
       line-height: 2em;
       margin: 1em;
       font-size: 1.3em;
-      // border: 1px solid $accent-light;
       background-color: $accent-light;
       color: white;
       text-align: center;
@@ -95,4 +94,25 @@
       transition: all 0.4s;
     }
   }
+}
+
+#floating-home-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  @include mq($breakdown-sm) {
+    font-size: 3em;
+  }
+  margin: 1.4em;
+  background: none;
+  border: none;
+  color: $accent-light;
+  &.visible {
+    opacity: 1;
+  }
+  &.hidden {
+    opacity: 0;
+  }
+  transition: 0.5s;
 }

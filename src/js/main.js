@@ -1,8 +1,49 @@
 import data from "./data.js";
 
+const floatingHomeButton = document.getElementById("floating-home-button");
+
+let visibilityCanBeUpdated = true;
+
 document.onreadystatechange = (event) => {
   if (event.target.readyState === "complete") {
     loadProjects(data);
+    // initially sets floating button display to none
+    floatingHomeButton.style.display = "none";
+  }
+};
+
+// when scrolling update floating button's visibility
+// not more often than every 200 milliseconds
+document.addEventListener("scroll", () => {
+  if (visibilityCanBeUpdated) {
+    updateHomeButtonVisibility();
+    visibilityCanBeUpdated = false;
+    window.setTimeout(() => {
+      visibilityCanBeUpdated = true;
+    }, 200);
+  }
+});
+
+// when floating button's transition ends
+// and button has class hidden its display is set to none
+floatingHomeButton.addEventListener("transitionend", () => {
+  if (floatingHomeButton.classList.contains("hidden")) {
+    floatingHomeButton.style.display = "none";
+  }
+});
+
+const updateHomeButtonVisibility = () => {
+  if (window.scrollY > window.innerHeight * 1.2) {
+    floatingHomeButton.style.display = "inline-block";
+    // wait short period of time and update class list
+    window.setTimeout(() => {
+      floatingHomeButton.classList.add("visible");
+      floatingHomeButton.classList.remove("hidden");
+    }, 20);
+  } else {
+    floatingHomeButton.classList.add("hidden");
+    floatingHomeButton.classList.remove("visible");
+    // after transition ends display will be set to none by event listener
   }
 };
 
