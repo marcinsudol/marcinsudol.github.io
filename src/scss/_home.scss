@@ -7,6 +7,8 @@
   background-size: cover;
   background-attachment: scroll;
   background-position: center center;
+  background-color: $accent-light;
+  background-blend-mode: multiply;
 
   #nav-container {
     flex: 1 1 0;
@@ -80,7 +82,8 @@
       line-height: 2em;
       margin: 1em;
       font-size: 1.3em;
-      background-color: $accent-light;
+      // background-color: $accent-light;
+      border: 2px solid white;
       color: white;
       text-align: center;
       &:hover,
@@ -100,13 +103,20 @@
   position: fixed;
   top: 0;
   right: 0;
+  height: 1.6em;
+  width: 1.6em;
   font-size: 2em;
+  margin: 1em;
   @include mq($breakdown-sm) {
-    font-size: 3em;
+    font-size: 2.6em;
   }
-  margin: 1.4em;
+  @include mq($breakdown-md) {
+    margin: 1.3em;
+  }
+
   background: none;
-  border: none;
+  border: 1px solid $accent-light;
+  border-radius: 0.25em;
   color: $accent-light;
   &.visible {
     opacity: 1;
