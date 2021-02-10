@@ -41,12 +41,13 @@
     <main id="main">
       <!-- SECTION HOME -->
       <section id="home">
-        <div id="nav-container">
-          <nav id="nav">
-            <a id="contact-button" href="#contact"
-              ><i class="far fa-user"></i><span> About / Contact</span></a
-            >
-          </nav>
+        <div id="upper-home-section">
+          <a
+            id="contact-button"
+            href="#contact"
+            aria-label="Go to contact section"
+            ><i class="far fa-user"></i><span> About / Contact</span></a
+          >
         </div>
         <div id="welcome-container">
           <div id="welcome">
@@ -57,7 +58,7 @@
             </p>
           </div>
         </div>
-        <div id="buttons-container">
+        <div id="lower-home-section">
           <a id="projects-button" href="#projects"
             ><i class="far fa-folder-open"></i> Show Projects</a
           >
@@ -65,15 +66,15 @@
       </section>
 
       <!-- SECTION PROJECTS -->
-      <section id="projects"></section>
+      <section id="projects">
+        <ol id="groups-list"></ol>
+      </section>
 
       <!-- SECTION CONTACT -->
       <section id="contact">
         <div id="bio-container">
           <article id="bio">
-            <header>
-              <h4>About Me</h4>
-            </header>
+            <h2 class="header">About Me</h2>
             <p>
               I completed math studies and have worked for over 10 years as
               analyst in market research company. I written scripts in SPSS,
@@ -112,7 +113,7 @@
       </section>
 
       <button id="floating-home-button" class="hidden">
-        <a href="#home">
+        <a href="#home" aria-label="Return to home section">
           <i class="fas fa-arrow-up"></i>
         </a>
       </button>

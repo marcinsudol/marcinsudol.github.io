@@ -53,13 +53,6 @@ strong {
   border-radius: 0.25em;
 }
 
-@mixin pill {
-  display: inline-block;
-  margin: 0.2em;
-  padding: 0.4em 1em;
-  border-radius: 999px;
-}
-
 @mixin box {
   display: inline-block;
   margin: 0.4em;
@@ -70,6 +63,13 @@ strong {
     padding: 1em;
     border-radius: 0.6em;
   }
+}
+
+@mixin pill {
+  display: inline-block;
+  margin: 0.2em;
+  padding: 0.4em 1em;
+  border-radius: 999px;
 }
 
 @mixin hover-shadow {

@@ -10,7 +10,7 @@
   background-color: $accent-light;
   background-blend-mode: multiply;
 
-  #nav-container {
+  #upper-home-section {
     flex: 1 1 0;
     text-align: right;
     #contact-button {
@@ -65,7 +65,7 @@
     }
   }
 
-  #buttons-container {
+  #lower-home-section {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,6 @@
       line-height: 2em;
       margin: 1em;
       font-size: 1.3em;
-      // background-color: $accent-light;
       border: 2px solid white;
       color: white;
       text-align: center;

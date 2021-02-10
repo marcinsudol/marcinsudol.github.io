@@ -48,36 +48,35 @@ const updateHomeButtonVisibility = () => {
 };
 
 const loadProjects = (data) => {
-  const projects = document.getElementById("projects");
+  const groupsList = document.getElementById("groups-list");
 
   for (let i = data.length - 1; i >= 0; i--) {
-    projects.appendChild(createProjectsGroupElement(data[i]));
+    groupsList.appendChild(createProjectsGroupElement(data[i]));
   }
 };
 
 const createProjectsGroupElement = (obj) => {
-  const group = document.createElement("div");
+  const group = document.createElement("li");
   group.classList = "projects-group";
-  group.innerHTML = `<header class="header">
-            <h3>${obj.title}</h3>
-          </header>`;
+  group.innerHTML = `<h2 class="group-header">${obj.title}</h2><ol class="projects-list"></ol>`;
 
+  const list = group.querySelector(".projects-list");
   for (let i = obj.projects.length - 1; i >= 0; i--) {
-    group.appendChild(createProject(obj.projects[i]));
+    list.appendChild(createProject(obj.projects[i]));
   }
 
   return group;
 };
 
 const createProject = (obj) => {
-  const project = document.createElement("article");
+  const project = document.createElement("li");
   project.classList = "project";
   project.innerHTML = `<div class="img-container">
-              <a href="${obj.page}" target="_blank"><img src="${obj.img}" /></a>
+              <a href="${obj.page}" target="_blank"><img src="${obj.img}" alt="${obj.name}" /></a>
             </div>
             <div class="info">
-              <h4 class="name"><a href="${obj.page}" target="_blank">${obj.name}</a></h4>
-              <a class="repo" href="${obj.repo}" target="_blank"><i class="fab fa-github"></i> repository</a>
+              <h3 class="name">${obj.name}</h3>
+              <a class="repo" href="${obj.repo}" target="_blank" aria-label="open repository"><i class="fab fa-github"></i> repository</a>
               <ul class="tech"></ul>
             </div>`;
   const list = project.querySelector(".tech");

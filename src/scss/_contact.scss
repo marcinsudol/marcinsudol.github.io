@@ -18,14 +18,12 @@
       background-color: white;
       opacity: 0.95;
       box-shadow: 0 2px 8px $color-medium;
-      header {
+      .header {
+        @include special;
         margin: 1em;
         text-align: center;
-        h4 {
-          @include special;
-          font-size: 1.1em;
-          color: $accent-light;
-        }
+        font-size: 1.1em;
+        color: $accent-light;
       }
       p {
         margin: 1em;

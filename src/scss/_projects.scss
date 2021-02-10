@@ -7,114 +7,116 @@
 
 .projects-group {
   @include box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: block;
   background-color: white;
   box-shadow: 0 2px 8px $color-medium;
 
-  .header {
-    width: 100%;
+  .group-header {
+    @include textbox;
+    @include special;
+    display: block;
     text-align: center;
-    font-size: 1.4em;
-    h3 {
-      @include textbox;
-      @include special;
-    }
+    font-size: 1.5em;
   }
 
-  .project {
-    padding: 2em 1em;
+  .projects-list {
     display: flex;
-    flex-direction: column;
-    @include mq($breakdown-sm) {
-      flex-direction: row;
-    }
-    width: 100%;
-    @include mq($breakdown-md) {
-      width: 50%;
-    }
-    @include mq($breakdown-lg) {
-      width: 33%;
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
 
-    .img-container {
-      flex: 0 0 auto;
-      margin: auto;
-
-      a {
-        @include hover-up;
-        display: block;
-        border: 1px solid $color-medium;
-        border-radius: 10px;
-        overflow: hidden;
-
-        img {
-          height: 160px;
-          width: 240px;
-          display: block;
-          border: none;
-          background-color: $color-medium;
-        }
-      }
-    }
-
-    .info {
-      @include box;
-      flex: 1 1 100%;
-      text-align: center;
+    .project {
+      padding: 2em 1em;
+      display: flex;
+      flex-direction: column;
       @include mq($breakdown-sm) {
-        text-align: left;
-        margin: 0 1em;
+        flex-direction: row;
+      }
+      width: 100%;
+      @include mq($breakdown-md) {
+        width: 50%;
+      }
+      @include mq($breakdown-lg) {
+        width: 33%;
       }
 
-      .name {
-        @include special;
-        margin: 0.6em 0;
-        @include mq($breakdown-sm) {
-          margin-top: 0;
-        }
-        font-size: 1.4em;
-        text-transform: capitalize;
+      .img-container {
+        flex: 0 0 auto;
+        margin: auto;
+
         a {
-          transition: all 0.3s;
-          &:hover {
-            color: $accent-light;
+          @include hover-up;
+          display: block;
+          border: 1px solid $color-medium;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            height: 160px;
+            width: 240px;
+            display: block;
+            border: none;
+            background-color: $color-medium;
           }
         }
       }
 
-      .repo {
-        @include textbox;
-        @include hover-shadow;
-        vertical-align: middle;
-        margin-bottom: 1em;
-        border: 1px solid $color-medium;
-        color: $color-dark;
-        font-size: 0.8em;
-        &:hover {
-          background-color: $color-dark;
-          border-color: $color-dark;
-          color: $color-light;
-        }
-      }
-
-      .tech {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      .info {
+        @include box;
+        flex: 1 1 100%;
+        text-align: center;
         @include mq($breakdown-sm) {
-          justify-content: flex-start;
+          text-align: left;
+          margin: 0 1em;
         }
-        margin: 0.2em 0;
-        list-style: none;
 
-        li {
+        .name {
+          @include special;
+          margin: 0.6em 0;
+          @include mq($breakdown-sm) {
+            margin-top: 0;
+          }
+          font-size: 1.4em;
+          text-transform: capitalize;
+          a {
+            transition: all 0.3s;
+            &:hover {
+              color: $accent-light;
+            }
+          }
+        }
+
+        .repo {
           @include textbox;
-          border: 1px solid $accent-light;
-          color: $accent-light;
+          @include hover-shadow;
+          vertical-align: middle;
+          margin-bottom: 1em;
+          border: 1px solid $color-medium;
+          color: $color-dark;
           font-size: 0.8em;
+          &:hover {
+            background-color: $color-dark;
+            border-color: $color-dark;
+            color: white;
+          }
+        }
+
+        .tech {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          @include mq($breakdown-sm) {
+            justify-content: flex-start;
+          }
+          margin: 0.2em 0;
+          list-style: none;
+
+          li {
+            @include textbox;
+            border: 1px solid $accent-light;
+            color: $accent-light;
+            font-size: 0.8em;
+          }
         }
       }
     }
