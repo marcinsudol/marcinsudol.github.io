@@ -1,6 +1,6 @@
 import data from "./data.js";
 
-const floatingHomeButton = document.getElementById("floating-home-button");
+const floatingHomeButton = document.getElementById("floating-home-link");
 
 let visibilityCanBeUpdated = true;
 

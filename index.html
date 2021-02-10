@@ -43,7 +43,7 @@
       <section id="home">
         <div id="upper-home-section">
           <a
-            id="contact-button"
+            id="contact-link"
             href="#contact"
             aria-label="Go to contact section"
             ><i class="far fa-user"></i><span> About / Contact</span></a
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div id="lower-home-section">
-          <a id="projects-button" href="#projects"
+          <a id="projects-link" href="#projects"
             ><i class="far fa-folder-open"></i> Show Projects</a
           >
         </div>
@@ -98,6 +98,7 @@
             id="email"
             class="contact-item"
             href="mailto:marcin.sudol@outlook.com"
+            aria-label="email author"
           >
             <i class="far fa-envelope"></i> Email Me
           </a>
@@ -106,17 +107,21 @@
             class="contact-item"
             href="https://github.com/marcinsudol"
             target="_blank"
+            aria-label="go to github profile"
           >
             <i class="fab fa-github"></i> GitHub
           </a>
         </div>
       </section>
 
-      <button id="floating-home-button" class="hidden">
-        <a href="#home" aria-label="Return to home section">
-          <i class="fas fa-arrow-up"></i>
-        </a>
-      </button>
+      <a
+        id="floating-home-link"
+        class="hidden"
+        href="#home"
+        aria-label="return to home section"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </main>
 
     <!-- SCRIPTS -->

@@ -53,7 +53,7 @@ strong {
   text-align: right;
 }
 
-#home #upper-home-section #contact-button {
+#home #upper-home-section #contact-link {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 1em;
@@ -68,22 +68,22 @@ strong {
   transition: all 0.4s;
 }
 
-#home #upper-home-section #contact-button:hover, #home #upper-home-section #contact-button:active {
+#home #upper-home-section #contact-link:hover, #home #upper-home-section #contact-link:active {
   background-color: white;
   color: #555;
 }
 
-#home #upper-home-section #contact-button:active {
+#home #upper-home-section #contact-link:active {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
 
-#home #upper-home-section #contact-button span {
+#home #upper-home-section #contact-link span {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  #home #upper-home-section #contact-button span {
+  #home #upper-home-section #contact-link span {
     display: inline;
   }
 }
@@ -147,7 +147,7 @@ strong {
   }
 }
 
-#home #lower-home-section #projects-button {
+#home #lower-home-section #projects-link {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 1em;
@@ -164,49 +164,51 @@ strong {
   transition: all 0.4s;
 }
 
-#home #lower-home-section #projects-button:hover, #home #lower-home-section #projects-button:active {
+#home #lower-home-section #projects-link:hover, #home #lower-home-section #projects-link:active {
   background-color: white;
   color: #4d9de0;
 }
 
-#home #lower-home-section #projects-button:active {
+#home #lower-home-section #projects-link:active {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
 
-#floating-home-button {
+#floating-home-link {
   position: fixed;
   top: 0;
   right: 0;
   height: 1.6em;
   width: 1.6em;
+  line-height: 1.6em;
   font-size: 2em;
   margin: 1em;
   background: none;
   border: 1px solid #4d9de0;
   border-radius: 0.25em;
   color: #4d9de0;
+  text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
-  #floating-home-button {
+  #floating-home-link {
     font-size: 2.6em;
   }
 }
 
 @media screen and (min-width: 1100px) {
-  #floating-home-button {
+  #floating-home-link {
     margin: 1.3em;
   }
 }
 
-#floating-home-button.visible {
+#floating-home-link.visible {
   opacity: 1;
 }
 
-#floating-home-button.hidden {
+#floating-home-link.hidden {
   opacity: 0;
 }
 
