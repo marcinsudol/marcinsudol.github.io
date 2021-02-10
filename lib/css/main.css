@@ -382,7 +382,7 @@ strong {
   transition: all 0.4s;
   vertical-align: middle;
   margin-bottom: 1em;
-  border: 1px solid #bbb;
+  border: 1px solid #555;
   color: #555;
   font-size: 0.8em;
 }
@@ -428,8 +428,8 @@ strong {
   margin: 0.2em;
   padding: 0.4em 1em;
   border-radius: 0.25em;
-  border: 1px solid #4d9de0;
-  color: #4d9de0;
+  border: 1px solid #1f6dad;
+  color: #1f6dad;
   font-size: 0.8em;
 }
 
