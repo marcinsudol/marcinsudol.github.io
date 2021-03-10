@@ -90,6 +90,13 @@ const data = [
         tech: ["react", "bootstrap"],
       },
       {
+        name: "front-end notes",
+        page: "https://marcinsudol.github.io/front-end-notes/",
+        repo: "https://github.com/marcinsudol/front-end-notes",
+        img: "../../img/marcinsudol.github.io_front-end-notes_(600x400).png",
+        tech: ["react", "scss"],
+      },
+      {
         name: "recipe book",
         page: "https://marcinsudol.github.io/recipe-book/",
         repo: "https://github.com/marcinsudol/recipe-book",
