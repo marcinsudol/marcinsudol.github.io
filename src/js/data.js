@@ -80,7 +80,7 @@ const data = [
     ],
   },
   {
-    title: "Personal Development Projects",
+    title: "Personal Projects",
     projects: [
       {
         name: "to do list",
@@ -102,6 +102,13 @@ const data = [
         repo: "https://github.com/marcinsudol/recipe-book",
         img: "../../img/marcinsudol.github.io_recipe-book_(600x400).png",
         tech: ["vanilla js", "scss", "html"],
+      },
+      {
+        name: "social app",
+        page: "https://marcinsudol.github.io/social-app/",
+        repo: "https://github.com/marcinsudol/social-app",
+        img: "../../img/marcinsudol.github.io_social-app_(600x400).png",
+        tech: ["react", "scss"],
       },
     ],
   },
