@@ -70,7 +70,7 @@ strong {
 
 #home #upper-home-section #contact-link:hover, #home #upper-home-section #contact-link:active {
   background-color: white;
-  color: #555;
+  color: #4d9de0;
 }
 
 #home #upper-home-section #contact-link:active {
@@ -394,7 +394,6 @@ strong {
 
 .projects-group .projects-list .project .info .repo:hover {
   background-color: #555;
-  border-color: #555;
   color: white;
 }
 
